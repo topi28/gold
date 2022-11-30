@@ -1,9 +1,0 @@
-Org 0000H
-MOV a, #54H;
-ANL a, #0F0H;
-MOV 20H, a;
-ORL a, #04H;
-MOV 21H, a;
-CPL a;
-MOV 22H, a;
-MOV a, #54H;
