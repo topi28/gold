@@ -1,0 +1,15 @@
+// Program to generate Sine wave
+
+org 0000H
+CLR A;
+MOV DPTR, #3000H ;
+MOV R0, #00H;
+MOV CA, @A+DPTR;
+MOV P2, A;
+CLR A;
+
+DJNZ R0, LABEL;
+SJMP UP;
+ORG 3000H;
+
+DB 128, 192, 238, 255, 238, 192, 173, 64, 17, 0, 17, 64, 128;

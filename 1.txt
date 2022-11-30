@@ -1,0 +1,20 @@
+arg 0000H
+mov r2, #09H;
+mov r3, #04H;
+mov a, r2;
+add a, r3;
+mov 20H, a;
+mov a, r2;
+subb a,r3;
+mov 21H, a;
+mov a, r2;
+mov b, r3;
+mul ab;
+mov 22H, a;
+mov 23H, b;
+mov a, r2;
+mov b, r3;
+div ab;
+mov 24H, a;
+mov 25H, b;
+END

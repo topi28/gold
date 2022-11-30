@@ -1,0 +1,17 @@
+// Program to generate triangular wave
+
+org 3000H
+CLR A;
+INC A;
+MOV P2, A;
+CJNEA, #0FFH, UP;
+DEC A;
+MOV P2, A;
+CJNEA, #00H, DOWN;
+SJMP UP;
+MOV R2, #0FFH;
+MOV R3, #0FFH;
+DJNZ R3, HERE;
+DJNZ R2, AGAIN;
+Ret
+END

@@ -1,0 +1,17 @@
+// Program to generate square wave
+
+org 0000H
+CLR A;
+MOV P2, A;
+ACALL DELAY;
+CPL A;
+MOV P2, A;
+
+ACALL DELAY;
+SJMP BACK;
+MOV R2, #0FFH;
+MOV R3, #0FFH;
+DJNZ R3, HERE;
+DJNZ R2, AGAIN;
+Ret
+END
